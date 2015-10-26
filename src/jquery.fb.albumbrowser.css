@@ -44,20 +44,41 @@ ul.fb-albums, ul.fb-photos {
 li.fb-album, li.fb-photo {
     position: relative;
     display: inline-block;
-    width: 130px;
-    height: 130px;
     overflow: hidden;
     padding: 0px;
     background-color: #f7f7f7;
-    /*margin-top: -4px;
-    margin-bottom: 3px;
-    margin-right: 3px;*/
     background-image: url('loader.gif');
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
-    border: 1px solid #fff;
-    border-bottom-style: none;
+    border: 15px solid #fff;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width:1201px){
+    li.fb-album, li.fb-photo {
+        width:285px;
+        height:285px;
+    }
+}
+@media screen and (max-width:1200px){
+    li.fb-album, li.fb-photo {
+        width:235px;
+        height:235px;
+    }
+}
+@media screen and (max-width:992px){
+    li.fb-album, li.fb-photo {
+        width:240px;
+        height:240px;
+    }
+}
+@media screen and (max-width:768px){
+    li.fb-album, li.fb-photo {
+        width:340px;
+        height:340px;
+        max-width:100%;
+    }
 }
 
     li.fb-photo:hover {
@@ -93,14 +114,14 @@ div.fb-album-title {
     position: relative;
     margin-top: 0px;
     padding: 5px;
-    display: none;
 }
 
 div.fb-album-count {
     background-color: rgba(59,89,152,0.8);
     color: #ffffff;
     position: absolute;
-    top: 0;
+    bottom: 0;
+    right:0;
     text-align: center;
     padding: 5px;
     margin: 6px;
@@ -162,6 +183,8 @@ img.fb-albums-list {
 
 .fb-preview-img {
     max-width: 100%;
+    padding:15px;
+    background:#fff;
     width: auto;
 }
 
@@ -290,4 +313,7 @@ img.fb-comment-account {
 
 .fb-albums-more {
     display: none;
+}
+.back-button{
+    margin:0 0 10px 15px;
 }
